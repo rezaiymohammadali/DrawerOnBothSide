@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make(view, "You have chosen mail option", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
-                Toast.makeText(MainActivity.this,"Hello World!",Toast.LENGTH_LONG).show();
-
             }
         });
 
@@ -51,6 +49,8 @@ public class MainActivity extends AppCompatActivity
         menuRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Hello World!",Toast.LENGTH_LONG).show();
+
                 if (drawer.isDrawerOpen(GravityCompat.END)) {
                     drawer.closeDrawer(GravityCompat.END);
                 } else {
