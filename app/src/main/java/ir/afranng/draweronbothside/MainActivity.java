@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity
         menuRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toasdfsdfsdfsdfsdf;
                 if (drawer.isDrawerOpen(GravityCompat.END)) {
                     drawer.closeDrawer(GravityCompat.END);
                 } else {
