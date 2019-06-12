@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity
         menuRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toasdfsdfsdfsdfsdf;
+                Toast.makeText(MainActivity.this,"Hello World!",Toast.LENGTH_LONG).show();
+
                 if (drawer.isDrawerOpen(GravityCompat.END)) {
                     drawer.closeDrawer(GravityCompat.END);
                 } else {
@@ -66,6 +67,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+        Toast.makeText(MainActivity.this,"Hello World!",Toast.LENGTH_LONG).show();
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
