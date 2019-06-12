@@ -21,18 +21,21 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "You have chosen mail option", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                Toast.makeText(MainActivity.this,"Hello World!",Toast.LENGTH_LONG).show();
+
             }
         });
 
-        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ImageButton menuLeft = (ImageButton) findViewById(R.id.menuLeft);
-        ImageButton menuRight = (ImageButton) findViewById(R.id.menuRight);
+        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ImageButton menuLeft = findViewById(R.id.menuLeft);
+        ImageButton menuRight = findViewById(R.id.menuRight);
 
         menuLeft.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,15 +59,15 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        NavigationView navigationView1 = (NavigationView) findViewById(R.id.nav_view);
-        NavigationView navigationView2 = (NavigationView) findViewById(R.id.nav_view2);
+        NavigationView navigationView1 = findViewById(R.id.nav_view);
+        NavigationView navigationView2 = findViewById(R.id.nav_view2);
         navigationView1.setNavigationItemSelectedListener(this);
         navigationView2.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else if (drawer.isDrawerOpen(GravityCompat.END)) {
@@ -86,7 +89,7 @@ public class MainActivity extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+//        int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
 //        if (id == R.id.action_settings) {
@@ -123,7 +126,7 @@ public class MainActivity extends AppCompatActivity
 //            text = "pool";
 //        }
         Toast.makeText(this, "You have chosen " + text, Toast.LENGTH_LONG).show();
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         drawer.closeDrawer(GravityCompat.END);
         return true;
